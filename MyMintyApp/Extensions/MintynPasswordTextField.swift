@@ -51,6 +51,7 @@ class MintynPasswordTextField: UIView {
     func setupTextField() {
         passwordTextField.setViewConstraints(top: topAnchor, right: showHideButton.leadingAnchor, bottom: bottomAnchor, left: leadingAnchor, paddingLeft: 10, paddingRight: 5)
         passwordTextField.placeholder = "password"
+        self.passwordTextField.isSecureTextEntry = true
     }
     
     @objc private func showHidePassword(_ sender: UIButton) {

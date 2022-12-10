@@ -5,6 +5,9 @@
 //  Created by Oko-osi Korede on 07/12/2022.
 //
 
+// Most Icon are obtained from icons8
+//<a target="_blank" href="https://icons8.com/icon/JiB2z9ULPxXW/iphone-se">iPhone SE</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
 import UIKit
 import IQKeyboardManagerSwift
 

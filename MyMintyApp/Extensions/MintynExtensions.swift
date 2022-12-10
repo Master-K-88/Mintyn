@@ -15,6 +15,7 @@ enum MintynText {
     case phoneNumber
     case passwordText
     case loginTitle
+    case forgetPasswordInfo
     
     
     // button
@@ -49,6 +50,8 @@ extension MintynText {
             return "Password"
         case .loginText:
             return "Login"
+        case .forgetPasswordInfo:
+            return "We will send you a password reset code."
         case .continueText:
             return "Continue"
         case .registerText:

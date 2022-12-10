@@ -253,6 +253,8 @@ class LoginViewController: UIViewController {
     
     @objc func registerNewDeviceButtonTapped(_ sender: UIButton) {
         print("New registration tapped")
+        let registerVC = RegisterNewDeviceVC()
+        navigationController?.pushViewController(registerVC, animated: true)
     }
     
 }

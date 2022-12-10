@@ -17,7 +17,7 @@
 		93D306E629438DB6008F287D /* MintynExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306E529438DB6008F287D /* MintynExtensions.swift */; };
 		93D306E829439070008F287D /* MintynLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306E729439070008F287D /* MintynLoginView.swift */; };
 		93D306EA2943AE4F008F287D /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306E92943AE4E008F287D /* CreateAccountView.swift */; };
-		93D306EC2943B2B8008F287D /* MintynTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306EB2943B2B8008F287D /* MintynTextField.swift */; };
+		93D306EC2943B2B8008F287D /* MintynNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306EB2943B2B8008F287D /* MintynNumberTextField.swift */; };
 		93D306EE2943C4BC008F287D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306ED2943C4BC008F287D /* LoginViewController.swift */; };
 		93D306F02943CD13008F287D /* MintynPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306EF2943CD13008F287D /* MintynPasswordTextField.swift */; };
 		93D306F32943D3E1008F287D /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 93D306F22943D3E1008F287D /* IQKeyboardManagerSwift */; };
@@ -25,6 +25,9 @@
 		93D306F729441739008F287D /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306F629441738008F287D /* SupportViewController.swift */; };
 		93D306F92944602C008F287D /* MintynMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306F82944602C008F287D /* MintynMessageView.swift */; };
 		93D306FB29446DE3008F287D /* MintynMessageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306FA29446DE3008F287D /* MintynMessageTextField.swift */; };
+		93D306FD294502D7008F287D /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306FC294502D7008F287D /* ForgetPasswordVC.swift */; };
+		93D306FF294507C1008F287D /* RegisterNewDeviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306FE294507C1008F287D /* RegisterNewDeviceVC.swift */; };
+		93D3070129450A06008F287D /* MintynTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D3070029450A06008F287D /* MintynTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,13 +43,16 @@
 		93D306E529438DB6008F287D /* MintynExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintynExtensions.swift; sourceTree = "<group>"; };
 		93D306E729439070008F287D /* MintynLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintynLoginView.swift; sourceTree = "<group>"; };
 		93D306E92943AE4E008F287D /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
-		93D306EB2943B2B8008F287D /* MintynTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintynTextField.swift; sourceTree = "<group>"; };
+		93D306EB2943B2B8008F287D /* MintynNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintynNumberTextField.swift; sourceTree = "<group>"; };
 		93D306ED2943C4BC008F287D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		93D306EF2943CD13008F287D /* MintynPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintynPasswordTextField.swift; sourceTree = "<group>"; };
 		93D306F42943F61C008F287D /* MintynCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintynCustomView.swift; sourceTree = "<group>"; };
 		93D306F629441738008F287D /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		93D306F82944602C008F287D /* MintynMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintynMessageView.swift; sourceTree = "<group>"; };
 		93D306FA29446DE3008F287D /* MintynMessageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintynMessageTextField.swift; sourceTree = "<group>"; };
+		93D306FC294502D7008F287D /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
+		93D306FE294507C1008F287D /* RegisterNewDeviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNewDeviceVC.swift; sourceTree = "<group>"; };
+		93D3070029450A06008F287D /* MintynTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintynTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 				93B2814D29409BD400CBB2CE /* Extensions */,
 				93B2813929409B6600CBB2CE /* AppDelegate.swift */,
 				93B2813B29409B6600CBB2CE /* SceneDelegate.swift */,
+				93D306FC294502D7008F287D /* ForgetPasswordVC.swift */,
 				93D306F629441738008F287D /* SupportViewController.swift */,
 				93B2813D29409B6600CBB2CE /* ViewController.swift */,
 				93D306E92943AE4E008F287D /* CreateAccountView.swift */,
@@ -91,6 +98,7 @@
 				93B2814229409B6800CBB2CE /* Assets.xcassets */,
 				93B2814429409B6800CBB2CE /* LaunchScreen.storyboard */,
 				93B2814729409B6800CBB2CE /* Info.plist */,
+				93D306FE294507C1008F287D /* RegisterNewDeviceVC.swift */,
 			);
 			path = MyMintyApp;
 			sourceTree = "<group>";
@@ -101,11 +109,12 @@
 				93D306E3294374DB008F287D /* ViewExtension.swift */,
 				93D306E529438DB6008F287D /* MintynExtensions.swift */,
 				93D306E729439070008F287D /* MintynLoginView.swift */,
-				93D306EB2943B2B8008F287D /* MintynTextField.swift */,
+				93D306EB2943B2B8008F287D /* MintynNumberTextField.swift */,
 				93D306EF2943CD13008F287D /* MintynPasswordTextField.swift */,
 				93D306F42943F61C008F287D /* MintynCustomView.swift */,
 				93D306F82944602C008F287D /* MintynMessageView.swift */,
 				93D306FA29446DE3008F287D /* MintynMessageTextField.swift */,
+				93D3070029450A06008F287D /* MintynTextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -188,7 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93D306EE2943C4BC008F287D /* LoginViewController.swift in Sources */,
-				93D306EC2943B2B8008F287D /* MintynTextField.swift in Sources */,
+				93D306EC2943B2B8008F287D /* MintynNumberTextField.swift in Sources */,
 				93D306F729441739008F287D /* SupportViewController.swift in Sources */,
 				93B2813E29409B6600CBB2CE /* ViewController.swift in Sources */,
 				93D306F02943CD13008F287D /* MintynPasswordTextField.swift in Sources */,
@@ -199,8 +208,11 @@
 				93D306F92944602C008F287D /* MintynMessageView.swift in Sources */,
 				93D306E4294374DB008F287D /* ViewExtension.swift in Sources */,
 				93D306E629438DB6008F287D /* MintynExtensions.swift in Sources */,
+				93D306FF294507C1008F287D /* RegisterNewDeviceVC.swift in Sources */,
 				93D306F52943F61C008F287D /* MintynCustomView.swift in Sources */,
+				93D306FD294502D7008F287D /* ForgetPasswordVC.swift in Sources */,
 				93B2813C29409B6600CBB2CE /* SceneDelegate.swift in Sources */,
+				93D3070129450A06008F287D /* MintynTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

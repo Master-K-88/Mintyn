@@ -17,7 +17,7 @@ class CreateAccountView: UIViewController {
     lazy var createAccountInfo = CustomLabel(text: MintynText.createAccountInfo.text, font: .systemFont(ofSize: 12, weight: .regular))
     lazy var phoneLabel = CustomLabel(text: MintynText.phoneNumber.text)
     lazy var phonetextField = MintynNumberTextField()
-    lazy var continueButton = CustomButton(text: "Continue")
+    lazy var continueButton = CustomButton(text: MintynText.continueText.text)
     lazy var registerButton = CustomButton(text: "Register your business")
     
     override func viewDidLoad() {
