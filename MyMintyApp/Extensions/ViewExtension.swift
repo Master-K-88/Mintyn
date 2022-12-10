@@ -244,6 +244,7 @@ class CustomLabel: UILabel {
         self.text = text
         self.font = font
         self.numberOfLines = 0
+        textColor = .black
     }
 }
 

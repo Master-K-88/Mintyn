@@ -33,6 +33,11 @@ class LoginViewController: UIViewController {
     lazy var checkButtonDescription = CustomLabel(text: MintynText.checkButtondescription.text)
 
     lazy var loginButton = CustomButton(text: MintynText.loginText.text)
+    lazy var forgetButton = CustomButton(text: MintynText.forgetPassword.text)
+    
+    lazy var registerNewDeviceButton = CustomButton(text: MintynText.registerNewDevice.text)
+    lazy var poweredByLabel = CustomLabel(text: MintynText.poweredByFinex.text, font: .systemFont(ofSize: 10, weight: .regular))
+    lazy var versionLabel = CustomLabel(text: "Version 1.2.97", font: .systemFont(ofSize: 8, weight: .semibold))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +65,12 @@ class LoginViewController: UIViewController {
         createAccountView.backgroundColor = .white
         createAccountView.cornerRadius = 30
         
-        [phoneLabel, phonetextField, passwordLabel, passwordTextField, checkButton, checkButtonDescription, loginButton].forEach { newView in
+        [
+            phoneLabel, phonetextField, passwordLabel,
+            passwordTextField, checkButton, checkButtonDescription,
+            loginButton, forgetButton, registerNewDeviceButton,
+            poweredByLabel, versionLabel
+        ].forEach { newView in
             createAccountView.addSubview(newView)
         }
         
@@ -90,6 +100,10 @@ class LoginViewController: UIViewController {
         setupCheckButton()
         setupCheckButtondescription()
         setupContinueButton()
+        setupForgetButton()
+        setupRegisterNewDeviceButton()
+        setupPoweredByLabel()
+        setupVersionLabel()
         
         setupInsuranceView()
         setupOpenAccountView()
@@ -179,6 +193,33 @@ class LoginViewController: UIViewController {
         firstVerticaltack.setViewConstraints(top: loginTitle.bottomAnchor, right: view.trailingAnchor, left: view.leadingAnchor, paddingTop: 10, paddingLeft: 20, paddingRight: 20)
     }
     
+    func setupForgetButton() {
+        forgetButton.setViewConstraints(top: checkButton.topAnchor, right: passwordTextField.trailingAnchor, bottom: checkButton.bottomAnchor)
+        forgetButton.setTitleColor(.mintynDefaultBrownColor, for: .normal)
+        
+        forgetButton.addTarget(self, action: #selector(forgetButtonTapped(_:)), for: .touchUpInside)
+    }
+    
+    func setupRegisterNewDeviceButton() {
+        registerNewDeviceButton.setViewConstraints(top: loginButton.bottomAnchor, paddingTop: 30, height: 35)
+        registerNewDeviceButton.setCenterAnchor(horizontal: createAccountView.centerXAnchor)
+        registerNewDeviceButton.setTitleColor(.mintynDefaultBrownColor, for: .normal)
+        registerNewDeviceButton.titleLabel?.font = .systemFont(ofSize: 14, weight: .semibold)
+        
+        registerNewDeviceButton.addTarget(self, action: #selector(registerNewDeviceButtonTapped(_:)), for: .touchUpInside)
+    }
+    
+    func setupPoweredByLabel() {
+        poweredByLabel.setViewConstraints(top: registerNewDeviceButton.bottomAnchor, paddingTop: -8)
+        poweredByLabel.setCenterAnchor(horizontal: createAccountView.centerXAnchor)
+        poweredByLabel.textColor = .lightGray
+    }
+    
+    func setupVersionLabel() {
+        versionLabel.setViewConstraints(top: poweredByLabel.bottomAnchor, paddingTop: 10)
+        versionLabel.setCenterAnchor(horizontal: createAccountView.centerXAnchor)
+    }
+    
     @objc func backButtontapped(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
@@ -204,6 +245,14 @@ class LoginViewController: UIViewController {
     
     @objc func businessRegViewTapped(_ sender: UIButton) {
         print("Business Registration tapped")
+    }
+    
+    @objc func forgetButtonTapped(_ sender: UIButton) {
+        print("Forget button tapped")
+    }
+    
+    @objc func registerNewDeviceButtonTapped(_ sender: UIButton) {
+        print("New registration tapped")
     }
     
 }

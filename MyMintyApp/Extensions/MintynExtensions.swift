@@ -23,6 +23,9 @@ enum MintynText {
     case registerText
     case createAccountText
     case checkButtondescription
+    case forgetPassword
+    case registerNewDevice
+    case poweredByFinex
 }
 
 extension MintynText {
@@ -54,6 +57,12 @@ extension MintynText {
             return "Create Account"
         case .checkButtondescription:
             return "Remember me"
+        case .forgetPassword:
+            return "Forget password?"
+        case .registerNewDevice:
+            return "Register new device"
+        case .poweredByFinex:
+            return "Powered by FINEX MFB"
         }
     }
 }
