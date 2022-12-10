@@ -184,12 +184,10 @@ class LoginViewController: UIViewController {
     }
     
     @objc func checkButtonTapped(_ sender: UIButton) {
-        print("This is selected")
         sender.isSelected = !sender.isSelected
     }
     
     @objc func contactSupportViewTapped(_ sender: UIButton) {
-        print("Contact tapped")
         let supportVC = SupportViewController()
         self.navigationController?.pushViewController(supportVC, animated: true)
     }
