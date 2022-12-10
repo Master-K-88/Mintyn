@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93B2813A29409B6600CBB2CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2813929409B6600CBB2CE /* AppDelegate.swift */; };
+		93B2813C29409B6600CBB2CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2813B29409B6600CBB2CE /* SceneDelegate.swift */; };
+		93B2813E29409B6600CBB2CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2813D29409B6600CBB2CE /* ViewController.swift */; };
+		93B2814129409B6600CBB2CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B2813F29409B6600CBB2CE /* Main.storyboard */; };
+		93B2814329409B6800CBB2CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93B2814229409B6800CBB2CE /* Assets.xcassets */; };
+		93B2814629409B6800CBB2CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B2814429409B6800CBB2CE /* LaunchScreen.storyboard */; };
+		93D306E4294374DB008F287D /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306E3294374DB008F287D /* ViewExtension.swift */; };
+		93D306E629438DB6008F287D /* MintynExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306E529438DB6008F287D /* MintynExtensions.swift */; };
+		93D306E829439070008F287D /* MintynLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306E729439070008F287D /* MintynLoginView.swift */; };
+		93D306EA2943AE4F008F287D /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306E92943AE4E008F287D /* CreateAccountView.swift */; };
+		93D306EC2943B2B8008F287D /* MintynTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306EB2943B2B8008F287D /* MintynTextField.swift */; };
+		93D306EE2943C4BC008F287D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306ED2943C4BC008F287D /* LoginViewController.swift */; };
+		93D306F02943CD13008F287D /* MintynPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306EF2943CD13008F287D /* MintynPasswordTextField.swift */; };
+		93D306F32943D3E1008F287D /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 93D306F22943D3E1008F287D /* IQKeyboardManagerSwift */; };
+		93D306F52943F61C008F287D /* MintynCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306F42943F61C008F287D /* MintynCustomView.swift */; };
+		93D306F729441739008F287D /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306F629441738008F287D /* SupportViewController.swift */; };
+		93D306F92944602C008F287D /* MintynMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306F82944602C008F287D /* MintynMessageView.swift */; };
+		93D306FB29446DE3008F287D /* MintynMessageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306FA29446DE3008F287D /* MintynMessageTextField.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		93B2813629409B6600CBB2CE /* MyMintyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMintyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93B2813929409B6600CBB2CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		93B2813B29409B6600CBB2CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		93B2813D29409B6600CBB2CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93B2814029409B6600CBB2CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		93B2814229409B6800CBB2CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93B2814529409B6800CBB2CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		93B2814729409B6800CBB2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93D306E3294374DB008F287D /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		93D306E529438DB6008F287D /* MintynExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintynExtensions.swift; sourceTree = "<group>"; };
+		93D306E729439070008F287D /* MintynLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintynLoginView.swift; sourceTree = "<group>"; };
+		93D306E92943AE4E008F287D /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		93D306EB2943B2B8008F287D /* MintynTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintynTextField.swift; sourceTree = "<group>"; };
+		93D306ED2943C4BC008F287D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		93D306EF2943CD13008F287D /* MintynPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintynPasswordTextField.swift; sourceTree = "<group>"; };
+		93D306F42943F61C008F287D /* MintynCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintynCustomView.swift; sourceTree = "<group>"; };
+		93D306F629441738008F287D /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
+		93D306F82944602C008F287D /* MintynMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintynMessageView.swift; sourceTree = "<group>"; };
+		93D306FA29446DE3008F287D /* MintynMessageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintynMessageTextField.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93B2813329409B6600CBB2CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93D306F32943D3E1008F287D /* IQKeyboardManagerSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93B2812D29409B6600CBB2CE = {
+			isa = PBXGroup;
+			children = (
+				93B2813829409B6600CBB2CE /* MyMintyApp */,
+				93B2813729409B6600CBB2CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93B2813729409B6600CBB2CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93B2813629409B6600CBB2CE /* MyMintyApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93B2813829409B6600CBB2CE /* MyMintyApp */ = {
+			isa = PBXGroup;
+			children = (
+				93B2814D29409BD400CBB2CE /* Extensions */,
+				93B2813929409B6600CBB2CE /* AppDelegate.swift */,
+				93B2813B29409B6600CBB2CE /* SceneDelegate.swift */,
+				93D306F629441738008F287D /* SupportViewController.swift */,
+				93B2813D29409B6600CBB2CE /* ViewController.swift */,
+				93D306E92943AE4E008F287D /* CreateAccountView.swift */,
+				93D306ED2943C4BC008F287D /* LoginViewController.swift */,
+				93B2813F29409B6600CBB2CE /* Main.storyboard */,
+				93B2814229409B6800CBB2CE /* Assets.xcassets */,
+				93B2814429409B6800CBB2CE /* LaunchScreen.storyboard */,
+				93B2814729409B6800CBB2CE /* Info.plist */,
+			);
+			path = MyMintyApp;
+			sourceTree = "<group>";
+		};
+		93B2814D29409BD400CBB2CE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				93D306E3294374DB008F287D /* ViewExtension.swift */,
+				93D306E529438DB6008F287D /* MintynExtensions.swift */,
+				93D306E729439070008F287D /* MintynLoginView.swift */,
+				93D306EB2943B2B8008F287D /* MintynTextField.swift */,
+				93D306EF2943CD13008F287D /* MintynPasswordTextField.swift */,
+				93D306F42943F61C008F287D /* MintynCustomView.swift */,
+				93D306F82944602C008F287D /* MintynMessageView.swift */,
+				93D306FA29446DE3008F287D /* MintynMessageTextField.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93B2813529409B6600CBB2CE /* MyMintyApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93B2814A29409B6800CBB2CE /* Build configuration list for PBXNativeTarget "MyMintyApp" */;
+			buildPhases = (
+				93B2813229409B6600CBB2CE /* Sources */,
+				93B2813329409B6600CBB2CE /* Frameworks */,
+				93B2813429409B6600CBB2CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyMintyApp;
+			packageProductDependencies = (
+				93D306F22943D3E1008F287D /* IQKeyboardManagerSwift */,
+			);
+			productName = MyMintyApp;
+			productReference = 93B2813629409B6600CBB2CE /* MyMintyApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93B2812E29409B6600CBB2CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					93B2813529409B6600CBB2CE = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = 93B2813129409B6600CBB2CE /* Build configuration list for PBXProject "MyMintyApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93B2812D29409B6600CBB2CE;
+			packageReferences = (
+				93D306F12943D3E1008F287D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
+			productRefGroup = 93B2813729409B6600CBB2CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93B2813529409B6600CBB2CE /* MyMintyApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93B2813429409B6600CBB2CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93B2814629409B6800CBB2CE /* LaunchScreen.storyboard in Resources */,
+				93B2814329409B6800CBB2CE /* Assets.xcassets in Resources */,
+				93B2814129409B6600CBB2CE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93B2813229409B6600CBB2CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93D306EE2943C4BC008F287D /* LoginViewController.swift in Sources */,
+				93D306EC2943B2B8008F287D /* MintynTextField.swift in Sources */,
+				93D306F729441739008F287D /* SupportViewController.swift in Sources */,
+				93B2813E29409B6600CBB2CE /* ViewController.swift in Sources */,
+				93D306F02943CD13008F287D /* MintynPasswordTextField.swift in Sources */,
+				93D306E829439070008F287D /* MintynLoginView.swift in Sources */,
+				93D306FB29446DE3008F287D /* MintynMessageTextField.swift in Sources */,
+				93B2813A29409B6600CBB2CE /* AppDelegate.swift in Sources */,
+				93D306EA2943AE4F008F287D /* CreateAccountView.swift in Sources */,
+				93D306F92944602C008F287D /* MintynMessageView.swift in Sources */,
+				93D306E4294374DB008F287D /* ViewExtension.swift in Sources */,
+				93D306E629438DB6008F287D /* MintynExtensions.swift in Sources */,
+				93D306F52943F61C008F287D /* MintynCustomView.swift in Sources */,
+				93B2813C29409B6600CBB2CE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		93B2813F29409B6600CBB2CE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93B2814029409B6600CBB2CE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		93B2814429409B6800CBB2CE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93B2814529409B6800CBB2CE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93B2814829409B6800CBB2CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		93B2814929409B6800CBB2CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93B2814B29409B6800CBB2CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NHDBVA4HXP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyMintyApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.profk.MyMintyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		93B2814C29409B6800CBB2CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NHDBVA4HXP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyMintyApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.profk.MyMintyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93B2813129409B6600CBB2CE /* Build configuration list for PBXProject "MyMintyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93B2814829409B6800CBB2CE /* Debug */,
+				93B2814929409B6800CBB2CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93B2814A29409B6800CBB2CE /* Build configuration list for PBXNativeTarget "MyMintyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93B2814B29409B6800CBB2CE /* Debug */,
+				93B2814C29409B6800CBB2CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		93D306F12943D3E1008F287D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93D306F22943D3E1008F287D /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93D306F12943D3E1008F287D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 93B2812E29409B6600CBB2CE /* Project object */;
+}
