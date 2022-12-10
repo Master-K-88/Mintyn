@@ -15,4 +15,6 @@ Mock-Test
 
 -> ![Simulator Screen Shot - iPhone12 Pro Max - 2022-12-10 at 18 06 14](https://user-images.githubusercontent.com/67703771/206867297-239f4350-c8b1-4b9e-8234-81628123ae41.png)
 
+-> ![Simulator Screen Shot - iPhone12 Pro Max - 2022-12-10 at 19 03 19](https://user-images.githubusercontent.com/67703771/206869074-4d13fbf2-0aa1-4434-b884-18f7de680732.png)
+
 
