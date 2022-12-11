@@ -103,6 +103,7 @@ class RegisterNewDeviceVC: UIViewController {
         bvnTextfield.layer.borderWidth = 2
         bvnTextfield.layer.borderColor = UIColor.black.withAlphaComponent(0.1).cgColor
         bvnTextfield.placeHolder = "Enter your bvn"
+        bvnTextfield.textfield.keyboardType = .numberPad
         bvnTextfield.textfield.delegate = self
     }
     
@@ -143,6 +144,9 @@ class RegisterNewDeviceVC: UIViewController {
     }
     
     @objc func continueButtonTapped(_ sender: UIButton) {
+        numberTextField.numberTextField.resignFirstResponder()
+        passwordTextfield.passwordTextField.resignFirstResponder()
+        bvnTextfield.textfield.resignFirstResponder()
         checkTextfields()
     }
     
@@ -159,15 +163,18 @@ class RegisterNewDeviceVC: UIViewController {
                 } else {
                     passwordLabel.textColor = .red
                     passwordTextfield.layer.borderColor = UIColor.red.cgColor
+                    showToast(message: "Password is requirred", bgColor: .red, textColor: .white)
                 }
             }
             else {
                 numberLabel.textColor = .red
                 numberTextField.layer.borderColor = UIColor.red.cgColor
+                showToast(message: "Phone number is requirred", bgColor: .red, textColor: .white)
             }
         } else {
             bvnLabel.textColor = .red
             bvnTextfield.layer.borderColor = UIColor.red.cgColor
+            showToast(message: "BVN is requirred", bgColor: .red, textColor: .white)
         }
     }
     
@@ -216,7 +223,7 @@ extension RegisterNewDeviceVC: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         switch textField {
-        case numberTextField.numberTextField:
+        case numberTextField.numberTextField, bvnTextfield.textfield:
             let allowedCharacters = CharacterSet.decimalDigits
             let characterSet = CharacterSet(charactersIn: string)
             return allowedCharacters.isSuperset(of: characterSet)

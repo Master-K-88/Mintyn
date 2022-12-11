@@ -10,22 +10,52 @@ import UIKit
 
 extension UIViewController {
     
-    func showToast(message : String, font: UIFont) {
-        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - CGFloat(Double(message.count) * 4), y: self.view.frame.size.height * 0.5, width: CGFloat(message.count * 8), height: 35))
-        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-        toastLabel.textColor = UIColor.white
+    func showToast(message : String, font: UIFont = .systemFont(ofSize: 12, weight: .bold), bgColor: UIColor = .black.withAlphaComponent(0.6), textColor: UIColor = .black) {
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - CGFloat(Double(message.count) * 4), y: self.view.frame.size.height * 0.2, width: CGFloat(message.count * 8), height: 35))
+        toastLabel.backgroundColor = bgColor
+        toastLabel.textColor = textColor
         toastLabel.font = font
         toastLabel.textAlignment = .center;
         toastLabel.text = message
         toastLabel.alpha = 1.0
         toastLabel.layer.cornerRadius = 10;
         toastLabel.clipsToBounds  =  true
-        self.view.addSubview(toastLabel)
+        toastLabel.numberOfLines = 0
+        
+        let blackView = UIView.bgView()
+        
+        if let appWindow: UIWindow = SceneDelegate.shared?.window {
+            print("Inside the windows")
+            
+//            blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(removeToast(_:))))
+            appWindow.addSubview(blackView)
+            appWindow.addSubview(toastLabel)
+            
+            let height: CGFloat = CGFloat(40)
+            blackView.frame = appWindow.frame
+            toastLabel.frame = CGRect(x: 20, y: appWindow.frame.height, width: appWindow.frame.width - 40, height: height)
+            blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
+            blackView.alpha = 0
+            
+            UIView.animate(withDuration: 0.5, delay: 0.2, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut) {
+                blackView.alpha = 1
+                toastLabel.frame = CGRect(x: 20, y: appWindow.frame.height - height - 20, width: toastLabel.frame.width, height: toastLabel.frame.height)
+            } completion: { completed in
+                print(completed)
+            }
+        }
         UIView.animate(withDuration: 5.0, delay: 0.1, options: .curveEaseOut) {
             toastLabel.alpha = 0.0
         } completion: {(isCompleted) in
-            toastLabel.removeFromSuperview()
+            self.removeToast([toastLabel, blackView])
         }
+    }
+    
+    @objc func removeToast(_ addedViews: [UIView]) {
+        addedViews.forEach { newView in
+            newView.removeFromSuperview()
+        }
+//        toastLabel.removeFromSuperview()
     }
     
     

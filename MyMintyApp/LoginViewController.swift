@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     lazy var firstVerticaltack = CustomStackView(views: [firstHorizontalStack, secondHorizontalStack], axis: .vertical)
     
     lazy var phoneLabel = CustomLabel(text: MintynText.phoneNumber.text)
-    lazy var phonetextField = MintynNumberTextField()
+    lazy var phoneTextField = MintynNumberTextField()
 
     lazy var passwordLabel = CustomLabel(text: MintynText.passwordText.text)
     lazy var passwordTextField = MintynPasswordTextField()
@@ -66,7 +66,7 @@ class LoginViewController: UIViewController {
         createAccountView.cornerRadius = 30
         
         [
-            phoneLabel, phonetextField, passwordLabel,
+            phoneLabel, phoneTextField, passwordLabel,
             passwordTextField, checkButton, checkButtonDescription,
             loginButton, forgetButton, registerNewDeviceButton,
             poweredByLabel, versionLabel
@@ -118,24 +118,25 @@ class LoginViewController: UIViewController {
     }
     
     func setupPhonetextField() {
-        phonetextField.setViewConstraints(top: phoneLabel.bottomAnchor, right: createAccountView.trailingAnchor, left: phoneLabel.leadingAnchor,paddingTop: 10, paddingRight: 20, height: 50)
-        phonetextField.layer.borderWidth = 2
-        phonetextField.layer.borderColor = UIColor.black.withAlphaComponent(0.1).cgColor
+        phoneTextField.setViewConstraints(top: phoneLabel.bottomAnchor, right: createAccountView.trailingAnchor, left: phoneLabel.leadingAnchor,paddingTop: 10, paddingRight: 20, height: 50)
+        phoneTextField.layer.borderWidth = 2
+        phoneTextField.layer.borderColor = UIColor.black.withAlphaComponent(0.1).cgColor
     }
     
     
     func setupPasswordLabel() {
-        passwordLabel.setViewConstraints(top: phonetextField.bottomAnchor, left: createAccountView.leadingAnchor, paddingTop: 30, paddingLeft: 20)
+        passwordLabel.setViewConstraints(top: phoneTextField.bottomAnchor, left: createAccountView.leadingAnchor, paddingTop: 30, paddingLeft: 20)
     }
     
     func setupPasswordTextField() {
-        passwordTextField.setViewConstraints(top: passwordLabel.bottomAnchor, right: phonetextField.trailingAnchor, left: phonetextField.leadingAnchor,paddingTop: 10, height: 40)
+        passwordTextField.setViewConstraints(top: passwordLabel.bottomAnchor, right: phoneTextField.trailingAnchor, left: phoneTextField.leadingAnchor,paddingTop: 10, height: 40)
         passwordTextField.layer.borderWidth = 2
         passwordTextField.layer.borderColor = UIColor.black.withAlphaComponent(0.1).cgColor
         passwordTextField.passwordTextField.isSecureTextEntry = true
     }
     
     func setupContinueButton() {
+        
         let layer = loginButton.applyGradient(colours: [.mintynLightBrownColor2, .mintynDefaultBrownColor])
         loginButton.layer.insertSublayer(layer, at: 0)
         
@@ -143,6 +144,12 @@ class LoginViewController: UIViewController {
         loginButton.setCenterAnchor(horizontal: createAccountView.centerXAnchor)
         loginButton.setSize(height: 45)
         loginButton.cornerRadius = 10
+        
+        loginButton.addTarget(self, action: #selector(loginButtonTapped(_:)), for: .touchUpInside)
+    }
+    
+    @objc func loginButtonTapped(_ sender: UIButton) {
+        checkTextfields()
     }
     
     func setupCheckButton() {
@@ -234,11 +241,10 @@ class LoginViewController: UIViewController {
     }
     
     @objc func insuranceViewTapped(_ sender: UIButton) {
-        print("Insurance tapped")
+        self.showToast(message: "Coming Soon", bgColor: .white)
     }
     
     @objc func openAccountViewTapped(_ sender: UIButton) {
-        print("Open account tapped")
         let openAccountVC = CreateAccountView()
         self.navigationController?.pushViewController(openAccountVC, animated: false)
     }
@@ -248,13 +254,78 @@ class LoginViewController: UIViewController {
     }
     
     @objc func forgetButtonTapped(_ sender: UIButton) {
-        print("Forget button tapped")
+        let forgetPasswordVC = ForgetPasswordVC()
+        navigationController?.pushViewController(forgetPasswordVC, animated: true)
     }
     
     @objc func registerNewDeviceButtonTapped(_ sender: UIButton) {
-        print("New registration tapped")
         let registerVC = RegisterNewDeviceVC()
         navigationController?.pushViewController(registerVC, animated: true)
     }
     
+    func checkTextfields() {
+        if let numberText = phoneTextField.numberTextField.text, !numberText.isEmpty {
+            print("Phone Number is: \(numberText)")
+            defaultPhoneTextField()
+            if let passwordText = passwordTextField.passwordTextField.text, !passwordText.isEmpty {
+                print("Password is: \(passwordText)")
+                defaultPasswordTextField()
+            } else {
+                passwordLabel.textColor = .red
+                passwordTextField.layer.borderColor = UIColor.red.cgColor
+                showToast(message: "Password is requirred", bgColor: .red, textColor: .white)
+            }
+        }
+        else {
+            phoneLabel.textColor = .red
+            phoneTextField.layer.borderColor = UIColor.red.cgColor
+            showToast(message: "Phone number is requirred", bgColor: .red, textColor: .white)
+        }
+    }
+    
+    func defaultPhoneTextField() {
+        phoneTextField.layer.borderColor = UIColor.black.withAlphaComponent(0.1).cgColor
+        phoneLabel.textColor = .black
+    }
+    
+    func defaultPasswordTextField() {
+        passwordTextField.layer.borderColor = UIColor.black.withAlphaComponent(0.1).cgColor
+        passwordLabel.textColor = .black
+    }
+    
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        switch textField {
+        case phoneTextField.numberTextField:
+            defaultPhoneTextField()
+        case passwordTextField.passwordTextField:
+            defaultPasswordTextField()
+        default:
+            break
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch textField {
+        case phoneTextField.numberTextField:
+            defaultPhoneTextField()
+        case passwordTextField.passwordTextField:
+            defaultPasswordTextField()
+        default:
+            break
+        }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        switch textField {
+        case phoneTextField.numberTextField:
+            let allowedCharacters = CharacterSet.decimalDigits
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet)
+        default:
+            return true
+        }
+    }
 }
