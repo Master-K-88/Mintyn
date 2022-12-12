@@ -24,6 +24,11 @@ class ForgetPasswordVC: UIViewController {
     
     lazy var continueButton = CustomButton(text: MintynText.continueText.text, font: .systemFont(ofSize: 16, weight: .semibold))
     
+    lazy var issuesLabel = CustomLabel(text: "Having issues?", font: .systemFont(ofSize: 16, weight: .semibold))
+    lazy var contactSupportButton = CustomButton(text: "Contact Support", font: .systemFont(ofSize: 16, weight: .bold))
+    
+    lazy var contactSupportStack = CustomStackView(views: [issuesLabel, contactSupportButton], distribution: .fillProportionally, spacing: 2)
+    
     
     
     override func viewDidLoad() {
@@ -36,7 +41,7 @@ class ForgetPasswordVC: UIViewController {
         [
             backButton, forgetPasswordTitle, forgetPasswordIconBGView,
             bvnLabel, bvnTextfield, numberLabel, numberTextField,
-            continueButton
+            continueButton, contactSupportStack
         ].forEach { newView in
             view.addSubview(newView)
         }
@@ -56,6 +61,8 @@ class ForgetPasswordVC: UIViewController {
         setupNumberTextfield()
         
         setupContinueButton()
+        
+        setupContactSupportButton()
     }
     
     func setupBackButton() {
@@ -123,6 +130,16 @@ class ForgetPasswordVC: UIViewController {
         continueButton.addTarget(self, action: #selector(continueButtonTapped(_:)), for: .touchUpInside)
     }
     
+    func setupContactSupportButton() {
+        contactSupportStack.setViewConstraints(top: continueButton.bottomAnchor, paddingTop: 35)
+        contactSupportStack.setCenterAnchor(horizontal: view.centerXAnchor)
+        issuesLabel.textColor = .black
+        contactSupportStack.setSize(width: 260)
+        contactSupportButton.setSize(width: 140)
+        contactSupportButton.setTitleColor(.mintynDefaultBrownColor, for: .normal)
+        contactSupportButton.addTarget(self, action: #selector(contactSupportButtonTapped(_:)), for: .touchUpInside)
+    }
+    
     
     @objc func backButtontapped(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
@@ -132,6 +149,11 @@ class ForgetPasswordVC: UIViewController {
         numberTextField.numberTextField.resignFirstResponder()
         bvnTextfield.textfield.resignFirstResponder()
         checkTextfields()
+    }
+    
+    @objc func contactSupportButtonTapped(_ sender: UIButton) {
+        let contactSupportVC = ContactSupportVC()
+        navigationController?.pushViewController(contactSupportVC, animated: true)
     }
     
     func checkTextfields() {

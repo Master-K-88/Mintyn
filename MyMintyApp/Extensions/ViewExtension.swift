@@ -254,7 +254,7 @@ extension UITableView {
     class func genericTableView(cell: AnyClass, identifier: String)  -> UITableView {
         let tableView = UITableView()
         tableView.register(cell, forCellReuseIdentifier: identifier)
-//        tableView.rowHeight = 180
+        tableView.rowHeight = 80
         return tableView
     }
 }

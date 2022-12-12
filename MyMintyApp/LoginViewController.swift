@@ -121,6 +121,7 @@ class LoginViewController: UIViewController {
         phoneTextField.setViewConstraints(top: phoneLabel.bottomAnchor, right: createAccountView.trailingAnchor, left: phoneLabel.leadingAnchor,paddingTop: 10, paddingRight: 20, height: 50)
         phoneTextField.layer.borderWidth = 2
         phoneTextField.layer.borderColor = UIColor.black.withAlphaComponent(0.1).cgColor
+        phoneTextField.numberTextField.delegate = self
     }
     
     
@@ -133,6 +134,8 @@ class LoginViewController: UIViewController {
         passwordTextField.layer.borderWidth = 2
         passwordTextField.layer.borderColor = UIColor.black.withAlphaComponent(0.1).cgColor
         passwordTextField.passwordTextField.isSecureTextEntry = true
+        
+        passwordTextField.passwordTextField.delegate = self
     }
     
     func setupContinueButton() {
@@ -323,7 +326,8 @@ extension LoginViewController: UITextFieldDelegate {
         case phoneTextField.numberTextField:
             let allowedCharacters = CharacterSet.decimalDigits
             let characterSet = CharacterSet(charactersIn: string)
-            return allowedCharacters.isSuperset(of: characterSet)
+            let textCount = phoneTextField.numberTextField.text?.count ?? 0
+            return allowedCharacters.isSuperset(of: characterSet) && textCount < 10
         default:
             return true
         }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		935D6C8A294701470026DF93 /* ContactOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D6C89294701470026DF93 /* ContactOptionCell.swift */; };
+		935D6C8C294713DD0026DF93 /* ContactOptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D6C8B294713DD0026DF93 /* ContactOptionViewModel.swift */; };
 		93B2813A29409B6600CBB2CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2813929409B6600CBB2CE /* AppDelegate.swift */; };
 		93B2813C29409B6600CBB2CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2813B29409B6600CBB2CE /* SceneDelegate.swift */; };
 		93B2813E29409B6600CBB2CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B2813D29409B6600CBB2CE /* ViewController.swift */; };
@@ -28,9 +30,12 @@
 		93D306FD294502D7008F287D /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306FC294502D7008F287D /* ForgetPasswordVC.swift */; };
 		93D306FF294507C1008F287D /* RegisterNewDeviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D306FE294507C1008F287D /* RegisterNewDeviceVC.swift */; };
 		93D3070129450A06008F287D /* MintynTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D3070029450A06008F287D /* MintynTextField.swift */; };
+		93D307032946483F008F287D /* ContactSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D307022946483F008F287D /* ContactSupport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		935D6C89294701470026DF93 /* ContactOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactOptionCell.swift; sourceTree = "<group>"; };
+		935D6C8B294713DD0026DF93 /* ContactOptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactOptionViewModel.swift; sourceTree = "<group>"; };
 		93B2813629409B6600CBB2CE /* MyMintyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMintyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B2813929409B6600CBB2CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93B2813B29409B6600CBB2CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +58,7 @@
 		93D306FC294502D7008F287D /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
 		93D306FE294507C1008F287D /* RegisterNewDeviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNewDeviceVC.swift; sourceTree = "<group>"; };
 		93D3070029450A06008F287D /* MintynTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintynTextField.swift; sourceTree = "<group>"; };
+		93D307022946483F008F287D /* ContactSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSupport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 				93B2814429409B6800CBB2CE /* LaunchScreen.storyboard */,
 				93B2814729409B6800CBB2CE /* Info.plist */,
 				93D306FE294507C1008F287D /* RegisterNewDeviceVC.swift */,
+				93D307022946483F008F287D /* ContactSupport.swift */,
+				935D6C8B294713DD0026DF93 /* ContactOptionViewModel.swift */,
+				935D6C89294701470026DF93 /* ContactOptionCell.swift */,
 			);
 			path = MyMintyApp;
 			sourceTree = "<group>";
@@ -204,8 +213,11 @@
 				93D306E829439070008F287D /* MintynLoginView.swift in Sources */,
 				93D306FB29446DE3008F287D /* MintynMessageTextField.swift in Sources */,
 				93B2813A29409B6600CBB2CE /* AppDelegate.swift in Sources */,
+				935D6C8A294701470026DF93 /* ContactOptionCell.swift in Sources */,
+				93D307032946483F008F287D /* ContactSupport.swift in Sources */,
 				93D306EA2943AE4F008F287D /* CreateAccountView.swift in Sources */,
 				93D306F92944602C008F287D /* MintynMessageView.swift in Sources */,
+				935D6C8C294713DD0026DF93 /* ContactOptionViewModel.swift in Sources */,
 				93D306E4294374DB008F287D /* ViewExtension.swift in Sources */,
 				93D306E629438DB6008F287D /* MintynExtensions.swift in Sources */,
 				93D306FF294507C1008F287D /* RegisterNewDeviceVC.swift in Sources */,
